@@ -11,7 +11,7 @@
     <div class="container px-4 py-2">
      <div class="row g-4 py-2 row-cols-1 row-cols-lg-1">
       <div class="feature col div-choice">
-            <div class="scenario-description">Explore how investment portfolio data can be stored and queried in Cassandra NoSQL database.</div>
+            <div class="scenario-description">Learn about the most essential data definition and data manipulation statements in Cassandra Query Language (CQL).</div>
             <ul>
               <li><span class="scenario-description-attribute">Difficulty</span>: Beginner</li>
               <li><span class="scenario-description-attribute">Time</span>: 15 minutes</li>
@@ -19,9 +19,10 @@
             </ul>
             <div class="scenario-objectives">In this hands-on lab, you will:</div>
             <ul>
-              <li><span class="scenario-objective">Create tables for an investment portfolio data use case</span></li>
-              <li><span class="scenario-objective">Populate tables with sample investment portfolio data</span></li>
-              <li><span class="scenario-objective">Design and execute CQL queries over investment portfolio data</span></li>
+              <li><span class="scenario-objective">Learn about Cassandra Query Language (CQL)</span></li>
+              <li><span class="scenario-objective">Use the CQL shell</span></li>
+              <li><span class="scenario-objective">Execute statements <pre>CREATE KEYSPACE</pre>, `USE` and `CREATE TABLE`</span></li>
+              <li><span class="scenario-objective">Practice using statements `INSERT`, `SELECT`, `UPDATE` and `DELETE`</span></li>              
             </ul>
       </div>
      </div>
