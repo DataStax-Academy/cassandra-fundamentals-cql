@@ -21,8 +21,8 @@
             <ul>
               <li><span class="scenario-objective">Learn about Cassandra Query Language (CQL)</span></li>
               <li><span class="scenario-objective">Use the CQL shell</span></li>
-              <li><span class="scenario-objective">Execute statements <pre>CREATE KEYSPACE</pre>, `USE` and `CREATE TABLE`</span></li>
-              <li><span class="scenario-objective">Practice using statements `INSERT`, `SELECT`, `UPDATE` and `DELETE`</span></li>              
+              <li><span class="scenario-objective">Execute statements <code>CREATE KEYSPACE</code>, <code>USE</code> and <code>CREATE TABLE</code></span></li>
+              <li><span class="scenario-objective">Practice using statements <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code> and <code>DELETE</code></span></li>              
             </ul>
       </div>
      </div>
