@@ -18,20 +18,22 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3.1</div>
+<div class="step-title">Insert a row</div>
 
-✅ Find all trades for account `joe001`; order by trade date (desc):
+✅ Add the row into our table using the CQL `INSERT` statement:
+```
+INSERT INTO users (email, name, age, date_joined) 
+VALUES ('joe@datastax.com', 'Joe', 25, '2020-01-01');
+```
+
+✅ Insert another row into the table:
 
 <details>
-  <summary>Solution</summary>
+  <summary>Solution</summary> 
 
 ```
-SELECT account, 
-       TODATE(DATEOF(trade_id)) AS date, 
-       trade_id, type, symbol,
-       shares, price, amount 
-FROM trades_by_a_d
-WHERE account = 'joe001';
+INSERT INTO users (email, name, age, date_joined) 
+VALUES ('jen@datastax.com', 'Jen', 27, '2020-01-01');
 ```
 
 </details>

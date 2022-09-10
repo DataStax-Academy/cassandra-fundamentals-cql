@@ -18,23 +18,26 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3.3</div>
+<div class="step-title">Update a row</div>
 
-✅ Find all trades for account `joe001`, date range `2020-09-07` - `2020-09-11` and transaction type `buy`; order by trade date (desc):
+✅ Next, update the row using the CQL `UPDATE` statement:
+```
+UPDATE users SET name = 'Joseph' 
+WHERE email = 'joe@datastax.com';
+
+SELECT * FROM users;
+```
+
+✅ Update another row in the table:
 
 <details>
-  <summary>Solution</summary>
+  <summary>Solution</summary> 
 
 ```
-SELECT account, 
-       TODATE(DATEOF(trade_id)) AS date, 
-       trade_id, type, symbol,
-       shares, price, amount 
-FROM trades_by_a_td
-WHERE account = 'joe001'
-  AND type = 'buy'
-  AND trade_id > maxTimeuuid('2020-09-07')
-  AND trade_id < minTimeuuid('2020-09-12');
+UPDATE users SET name = 'Jennifer' 
+WHERE email = 'jen@datastax.com';
+
+SELECT * FROM users;
 ```
 
 </details>

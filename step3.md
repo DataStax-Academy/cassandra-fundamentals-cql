@@ -18,42 +18,22 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Populate tables</div>
+<div class="step-title">Create a keyspace</div>
 
-✅ Execute the CQL script to insert sample data:
-```
-SOURCE 'assets/investment_data.cql'
-```
+A keyspace is a namespace for a set of tables sharing a data replication strategy and some options. 
+It is conceptually similar to a "database" in a relational database management system.
 
-✅ Retrieve all rows from table `accounts_by_user`:
+✅ Create the keyspace:
 ```
-SELECT * FROM accounts_by_user;        
-```
-
-✅ Retrieve all rows from table `positions_by_account`:
-```
-SELECT * FROM positions_by_account;
+CREATE KEYSPACE killr_video
+WITH replication = {
+  'class': 'NetworkTopologyStrategy', 
+  'DC-Houston': 1 }; 
 ```
 
-✅ Retrieve all rows from table `trades_by_a_d`:
-```
-SELECT * FROM trades_by_a_d;                    
-```
-
-✅ Retrieve all rows from table `trades_by_a_td`:
-```
-SELECT * FROM trades_by_a_td;
-```
-
-✅ Retrieve all rows from table `trades_by_a_std`:
-```
-SELECT * FROM trades_by_a_std;       
-```
-
-✅ Retrieve all rows from table `trades_by_a_sd`:
-```
-SELECT * FROM trades_by_a_sd;       
-```
+Our keyspace name is `killr_video`. Any data in this keyspace will be replicated to datacenter `DC-Houston` 
+using replication strategy `NetworkTopologyStrategy` and replication factor `1`. In production, however, we strongly 
+recommend multiple datacenters and at least three replicas per datacenter for higher availability.
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

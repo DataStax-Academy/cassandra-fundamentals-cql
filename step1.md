@@ -18,30 +18,23 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Connect to Cassandra and create a keyspace</div>
+<div class="step-title">CQL</div>
 
-✅ Start Cassandra:
-```
-./cassandra
-```
+*Cassandra Query Language* (*CQL*) is the primary language for interacting with Apache Cassandra™ databases. 
+CQL data definition and data manipulation statements include:
 
-✅ Start the CQL shell:
-```
-cqlsh
-```
+*CQL Data Definition*
+- `CREATE | ALTER | DROP KEYSPACE`
+- `USE`
+- `CREATE | ALTER | DROP | TRUNCATE TABLE`
 
-✅ Create the `investment_data` keyspace:
-```
-CREATE KEYSPACE investment_data
-WITH replication = {
-  'class': 'NetworkTopologyStrategy', 
-  'DC-Houston': 1 };
-```
+*CQL Data Manipulation*
+- `INSERT` (**C**reate)
+- `SELECT` (**R**ead)
+- `UPDATE` (**U**pdate)
+- `DELETE` (**D**elete)
 
-✅ Set the current working keyspace:
-```
-USE investment_data;
-```
+Let's use some of these statements and see how they work.
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

@@ -18,22 +18,22 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3.2</div>
+<div class="step-title">Retrieve a row</div>
 
-✅ Find all trades for account `joe001` and date range `2020-09-07` - `2020-09-11`; order by trade date (desc):
+✅ Now, retrieve the row using the CQL `SELECT` statement:
+```
+SELECT * FROM users
+WHERE email = 'joe@datastax.com';
+```
+
+✅ Retrieve a different row from the table:
 
 <details>
-  <summary>Solution</summary>
+  <summary>Solution</summary> 
 
 ```
-SELECT account, 
-       TODATE(DATEOF(trade_id)) AS date, 
-       trade_id, type, symbol,
-       shares, price, amount 
-FROM trades_by_a_d
-WHERE account = 'joe001'
-  AND trade_id > maxTimeuuid('2020-09-07')
-  AND trade_id < minTimeuuid('2020-09-12');
+SELECT * FROM users
+WHERE email = 'jen@datastax.com';
 ```
 
 </details>

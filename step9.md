@@ -18,24 +18,26 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3.4</div>
+<div class="step-title">Delete a row</div>
 
-✅ Find all trades for account `joe001`, date range `2020-09-07` - `2020-09-11`, transaction type `buy` and instrument symbol `AAPL`; order by trade date (desc):
+✅ Finally, delete the row using the CQL `DELETE` statement:
+```
+DELETE FROM users 
+WHERE email = 'joe@datastax.com';
+
+SELECT * FROM users;
+```
+
+✅ Deleting another row from the table:
 
 <details>
   <summary>Solution</summary>
 
 ```
-SELECT account, 
-       TODATE(DATEOF(trade_id)) AS date, 
-       trade_id, type, symbol,
-       shares, price, amount 
-FROM trades_by_a_std
-WHERE account = 'joe001'
-  AND symbol = 'AAPL'
-  AND type = 'buy'
-  AND trade_id > maxTimeuuid('2020-09-07')
-  AND trade_id < minTimeuuid('2020-09-12');
+DELETE FROM users 
+WHERE email = 'jen@datastax.com';
+
+SELECT * FROM users;
 ```
 
 </details>

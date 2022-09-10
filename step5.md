@@ -18,20 +18,20 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q2</div>
+<div class="step-title">Create a table</div>
 
-✅ Find all positions in account `joe001`; order by instrument symbol (asc):
+A Cassandra table has named columns with data types, rows with values, and a primary key to uniquely identify each row. 
+As an example, let's create table `users` with four columns and primary key `email`. 
 
-<details>
-  <summary>Solution</summary>
-
+✅ Create the table:
 ```
-SELECT * 
-FROM positions_by_account
-WHERE account = 'joe001'; 
+CREATE TABLE users (
+  email TEXT PRIMARY KEY,
+  name TEXT,
+  age INT,
+  date_joined DATE
+);
 ```
-
-</details>
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

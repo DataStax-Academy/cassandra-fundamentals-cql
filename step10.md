@@ -18,26 +18,22 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q3.5</div>
+<div class="step-title">CQL vs. SQL</div>
 
-✅ Find all trades for account `joe001`, date range `2020-09-07` - `2020-09-11` and instrument symbol `AAPL`; order by trade date (desc):
+If you are familiar with SQL, CQL may look quite similar. 
+Indeed, there are many syntactic similarities between the two languages, but there are also many 
+important differences. Here are just a few facts about CQL that highlight some of the differences:
 
-<details>
-  <summary>Solution</summary>
+- CQL supports tables with single-row and multi-row partitions
+- CQL table primary key consists of a mandatory partition key and an optional clustering key
+- CQL does not support referential integrity constraints
+- CQL updates or inserts may result in upserts
+- CQL queries cannot retrieve data based on an arbitrary table column
+- CQL supports no joins or other binary operations
+- CQL CRUD operations are executed with a tunable consistency level
+- CQL supports lightweight transactions but not ACID transactions
 
-```
-SELECT account, 
-       TODATE(DATEOF(trade_id)) AS date, 
-       trade_id, type, symbol,
-       shares, price, amount 
-FROM trades_by_a_sd
-WHERE account = 'joe001'
-  AND symbol = 'AAPL'
-  AND trade_id > maxTimeuuid('2020-09-07')
-  AND trade_id < minTimeuuid('2020-09-12');
-```
-
-</details>
+If some of the above facts do not sound familiar, you know that there are more about CQL to learn! 
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

@@ -18,88 +18,18 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Create tables</div>
+<div class="step-title">Start the CQL shell</div>
 
-✅ Create table `accounts_by_user`:
+The CQL shell is a command-line client for executing CQL statements over a Cassandra database interactively. 
+
+✅ Get the CQL shell usage help:
 ```
-CREATE TABLE IF NOT EXISTS accounts_by_user (
-  username TEXT,
-  account_number TEXT,
-  cash_balance DECIMAL,
-  name TEXT STATIC,
-  PRIMARY KEY ((username),account_number)
-);
+cqlsh -h
 ```
 
-✅ Create table `positions_by_account`:
+✅ Start the CQL shell:
 ```
-CREATE TABLE IF NOT EXISTS positions_by_account (
-  account TEXT,
-  symbol TEXT,
-  quantity DECIMAL,
-  PRIMARY KEY ((account),symbol)
-);
-```
-
-✅ Create table `trades_by_a_d`:
-```
-CREATE TABLE IF NOT EXISTS trades_by_a_d (
-  account TEXT,
-  trade_id TIMEUUID,
-  type TEXT,
-  symbol TEXT,
-  shares DECIMAL,
-  price DECIMAL,
-  amount DECIMAL,
-  PRIMARY KEY ((account),trade_id)
-) WITH CLUSTERING ORDER BY (trade_id DESC);
-```
-
-✅ Create table `trades_by_a_td`:
-```
-CREATE TABLE IF NOT EXISTS trades_by_a_td (
-  account TEXT,
-  trade_id TIMEUUID,
-  type TEXT,
-  symbol TEXT,
-  shares DECIMAL,
-  price DECIMAL,
-  amount DECIMAL,
-  PRIMARY KEY ((account),type,trade_id)
-) WITH CLUSTERING ORDER BY (type ASC, trade_id DESC);
-```
-
-✅ Create table `trades_by_a_std`:
-```
-CREATE TABLE IF NOT EXISTS trades_by_a_std (
-  account TEXT,
-  trade_id TIMEUUID,
-  type TEXT,
-  symbol TEXT,
-  shares DECIMAL,
-  price DECIMAL,
-  amount DECIMAL,
-  PRIMARY KEY ((account),symbol,type,trade_id)
-) WITH CLUSTERING ORDER BY (symbol ASC, type ASC, trade_id DESC);
-```
-
-✅ Create table `trades_by_a_sd`:
-```
-CREATE TABLE IF NOT EXISTS trades_by_a_sd (
-  account TEXT,
-  trade_id TIMEUUID,
-  type TEXT,
-  symbol TEXT,
-  shares DECIMAL,
-  price DECIMAL,
-  amount DECIMAL,
-  PRIMARY KEY ((account),symbol,trade_id)
-) WITH CLUSTERING ORDER BY (symbol ASC, trade_id DESC);
-```
-
-✅ Verify that the six tables have been created:
-```
-DESCRIBE TABLES;
+cqlsh
 ```
 
 <!-- NAVIGATION -->

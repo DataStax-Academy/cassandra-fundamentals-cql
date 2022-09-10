@@ -18,20 +18,16 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Design query Q1</div>
+<div class="step-title">Set a working keyspace</div>
 
-✅ Find information about all investment accounts of a user with username `joe`:
+Many CQL statements work with tables, indexes and other objects defined within a specific keyspace. 
+For example, to refer to a table, we have to either use a fully-qualified name consisting of a keyspace name and a table name, 
+or set a working keyspace and simply refer to the table by its name. For convenience, we go with the second option.
 
-<details>
-  <summary>Solution</summary>
-
+✅ Set the current working keyspace:
 ```
-SELECT *
-FROM accounts_by_user
-WHERE username = 'joe';
+USE killr_video;
 ```
-
-</details>
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">
