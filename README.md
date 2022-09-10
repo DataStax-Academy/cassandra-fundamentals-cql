@@ -1,6 +1,6 @@
 # Cassandra Query Language
 
-## Learn about the most essential data definition and data manipulation statements in Cassandra Query Language (CQL)
+## Learn about essential data definition and manipulation statements in Cassandra Query Language (CQL)
 
 **In this hands-on lab, you will:**
 * Learn about Cassandra Query Language (CQL)

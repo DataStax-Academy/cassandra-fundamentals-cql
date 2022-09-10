@@ -11,7 +11,7 @@
     <div class="container px-4 py-2">
      <div class="row g-4 py-2 row-cols-1 row-cols-lg-1">
       <div class="feature col div-choice">
-            <div class="scenario-description">Learn about the most essential data definition and data manipulation statements in Cassandra Query Language (CQL).</div>
+            <div class="scenario-description">Learn about essential data definition and manipulation statements in Cassandra Query Language (CQL).</div>
             <ul>
               <li><span class="scenario-description-attribute">Difficulty</span>: Beginner</li>
               <li><span class="scenario-description-attribute">Time</span>: 15 minutes</li>
