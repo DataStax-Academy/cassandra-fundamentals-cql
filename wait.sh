@@ -17,6 +17,7 @@ echo ""
 
 echo -n 'Starting a Cassandra cluster ...'; 
 timeout 60 bash -c 'until cqlsh -e "describe cluster" >/dev/null 2>&1; do sleep 2; echo -n "."; done'; 
+sleep 3
 echo ' DONE!'
 echo "Cassandra successfully started."
 
