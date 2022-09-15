@@ -28,7 +28,7 @@ or set a working keyspace and simply refer to the table by its name. For conveni
 
 ✅ Set the current working keyspace:
 ```
-USE killr_video;
+USE ks_cql_intro;
 ```
 
 <!-- NAVIGATION -->
