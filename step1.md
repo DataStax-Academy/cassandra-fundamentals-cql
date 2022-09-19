@@ -22,7 +22,7 @@
 
 <div class="step-title">CQL</div>
 
-*Cassandra Query Language* (*CQL*) is the primary language for interacting with Apache Cassandra™ databases. 
+*Cassandra Query Language* (*CQL*) is the primary language for interacting with Apache Cassandra databases. 
 CQL data definition and data manipulation statements include:
 
 *CQL Data Definition*
